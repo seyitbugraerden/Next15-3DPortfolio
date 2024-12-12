@@ -8,8 +8,9 @@
   box-sizing: border-box;
 }
 
+/* Scroll için ideal CSS */
 html {
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory; 
   scroll-behavior: smooth;
 }
 

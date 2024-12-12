@@ -5,11 +5,19 @@ import Portfolio from "@/components/portfolio/Portfolio";
 
 export default function Home() {
   return (
-    <>
-      <Hero />
-      <Services />
-      <Portfolio />
-      <Contact />
-    </>
+    <div className="container">
+      <section id="#home">
+        <Hero />
+      </section>
+      <section id="#services">
+        <Services />
+      </section>
+      <section id="#portfolio">
+        <Portfolio />
+      </section>
+      <section id="#contact">
+        <Contact />
+      </section>
+    </div>
   );
 }
