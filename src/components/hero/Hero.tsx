@@ -1,22 +1,20 @@
 'use client'
-import { Canvas } from "@react-three/fiber";
-import "./hero.css";
-import { motion } from "motion/react";
-import { Suspense } from "react";
-import Shape from "./Shape";
 import Speech from "./Speech";
+import { motion } from "motion/react";
+
+import "./hero.css";
 
 const awardVariants = {
-  initial: {
+  initialAward: {
     x: -100,
     opacity: 0,
   },
-  animate: {
+  animateAward: {
     x: 0,
     opacity: 1,
     transition: {
       duration: 1,
-      staggerChildren: 0.2,
+      staggerChildren: 0.2, // child elemanların ard arda gelmesini sağlar.
     },
   },
 };
@@ -54,8 +52,8 @@ const Hero = () => {
         {/* AWARDS */}
         <motion.div
           variants={awardVariants}
-          initial="initial"
-          animate="animate"
+          initial="initialAward"
+          animate="animateAward"
           className="awards"
         >
           <motion.h2 variants={awardVariants}>Top Rated Designer</motion.h2>
@@ -160,7 +158,7 @@ const Hero = () => {
             transition={{
               duration: 10,
               repeat: Infinity,
-              ease: "linear",
+              ease: "easeIn",
             }}
           >
             <svg viewBox="0 0 200 200" width="150" height="150">
